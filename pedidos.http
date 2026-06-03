@@ -1,0 +1,35 @@
+@baseUrl = http://localhost:5190
+
+### 
+POST {{baseUrl}}/pedidos
+Content-Type: application/json
+
+{
+    "nome": "Produto",
+    "produto": "Produto",
+    "quantidade": 5,
+    "preco": 20.00
+}
+
+###
+GET {{baseUrl}}/pedidos
+
+###
+GET {{baseUrl}}/pedidos/1
+
+###
+GET {{baseUrl}}/pedidos/nome/Produto
+
+###
+PUT {{baseUrl}}/pedidos/1
+Content-Type: application/json
+
+{
+    "nome": "ProdutoEditado",
+    "produto": "ProdutoEditado",
+    "quantidade": 50,
+    "preco": 200.00
+}
+
+###
+DELETE {{baseUrl}}/pedidos/1
